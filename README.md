@@ -5,6 +5,7 @@ Favorite music: Brazilian Phonk
 Favorite Mythology Characters: Gaia, Hela, 
 
 Antinio: video-games
-Catherine Aincent Civilizations
+Katherine Aincent Civilizations
 
-need to specify the type of phonk that the ai uses to create song
+Need to specify the type of phonk that the ai uses to create song.
+Suno instinctively does a rock themed tune if instructions are unclear.
