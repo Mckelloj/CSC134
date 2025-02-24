@@ -6,25 +6,31 @@ int main() {
   // declare the variable we need
   int choice; 
 
+  const int YES = 1;
+  const int NO = 2;
+  const int IGNORE = 3;
+
+
+
   // ask the question
-  cout << "You're in a pokemon battle! âš¡Pikachu vs. ðŸ’¤Snorlax." << endl;
-  cout << "1. Fight" << endl;
-  cout << "2. Run"   << endl;
-  cout << "3. Use Item" << endl;
+  cout << "A witch approaches you and asks if you want to be her apperentice." << endl;
+  cout << "1. YES" << endl;
+  cout << "2. NO"   << endl;
+  cout << "3. IGNORE" << endl;
   cout << "Type 1,2, or 3: "; 
   cin >> choice;
 
   // using if, make a decision based on the user's choice
 
-  if (1 == choice) {
-  	cout << "You chose to fight" << endl;
+  if (YES == choice) {
+  	cout << "You say yes" << endl;
     cout << "Sadly, you lose. " << endl;
   }
-  else if (2 == choice) {
-  	cout << "You chose to run" << endl;
+  else if (NO == choice) {
+  	cout << "You say no and begin to walk away" << endl;
     cout << "You live to fight another day." << endl;
   }
-  else if (3 == choice) {
+  else if (IGNORE == choice) {
     cout << "You use a potion." << endl;
     cout << "More here later..." << endl;
   }
