@@ -1,4 +1,5 @@
 #include <iostream>
+
 using namespace std;
 
 // beginning of the main() method
@@ -13,6 +14,10 @@ int main() {
 
 
   // ask the question
+
+  
+    
+
   cout << "A witch approaches you and asks if you want to be her apperentice." << endl;
   cout << "1. YES" << endl;
   cout << "2. NO"   << endl;
@@ -20,23 +25,132 @@ int main() {
   cout << "Type 1,2, or 3: "; 
   cin >> choice;
 
+
+
   // using if, make a decision based on the user's choice
 
-  if (YES == choice) {
+  if (YES == choice) 
+  {
   	cout << "You say yes" << endl;
     cout << "The witch takes you to her magical tower and asks you to choose your speciality. " << endl;
+
+    cout << "1. Elementalist" << endl;
+    cout << "2. VoidKeeper"   << endl;
+    cout << "3. Enchanter" << endl;
+    cout << "Type 1,2, or 3: "; 
+    cin >> choice;
+    
+    if ( choice = 1)  
+    {
+      cout << "Congratulations you have chosen the elementalist path" << endl;
+    }
+
+    else if ( choice = 2)  
+    {
+      cout << "Congratulations you have chosen the Voidkeeper's path" << endl;
+    }
+
+    else if ( choice = 3)  
+    {
+      cout << "Congratulations you have chosen the Enchanter's path" << endl;
+    }
+
+    else if ( choice = 7894561234567890)  
+    {
+      cout << "Congratulations you have chosen the Unlocked the Divine path" << endl;
+      cout << "Str 10   Class bonus + 50" << endl;
+      cout << "Agi 8   Class bonus + 30" << endl;
+      cout << "Int 6   Class bonus + 20" << endl;
+      cout << "Str 7   Class bonus + 50" << endl;
+      
+    }
   }
-  else if (NO == choice) {
-  	cout << "You say no and begin to walk away" << endl;
-    cout << "You live to fight another day." << endl;
-  }
-  else if (IGNORE == choice) {
-    cout << "She gets angry and curses you to feel constantly hungry but  for you good food tastes horrible and vise versa." << endl;
-    cout << "More here later..." << endl;
-  }
-  else {
-  	cout << "I'm sorry, that is not a valid choice." << endl;
-  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    else if (NO == choice) 
+    {
+  	  cout << "You say no and begin to walk away" << endl;
+      cout << "She hypnotises you and takes you to her dungeon where she torchures you repeatedly." << endl;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      else if (IGNORE == choice) 
+      {
+        cout << "She curses you to feel constantly hungry, but you faint for an hour after every mouthful." << endl;
+        cout << "1. Apologise" << endl;
+        cout << "2. Attack her with your hunting knife"   << endl;
+        cout << "3. Blackmail her into removing the curse" << endl;
+        cout << "Type 1,2, or 3: "; 
+        cin >> choice;
+      }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+         else 
+         {
+  	        cout << "I'm sorry, that is not a valid choice." << endl;
+         }
+
+
+
   // finish up
   cout << "Thanks for playing!" << endl; // this runs no matter what they choose
   return 0; // exit without error
