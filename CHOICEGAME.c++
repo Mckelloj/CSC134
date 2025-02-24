@@ -31,7 +31,7 @@ int main() {
     cout << "You live to fight another day." << endl;
   }
   else if (IGNORE == choice) {
-    cout << "You use a potion." << endl;
+    cout << "She gets angry and curses you to feel constantly hungry but  for you good food tastes horrible and vise versa." << endl;
     cout << "More here later..." << endl;
   }
   else {
