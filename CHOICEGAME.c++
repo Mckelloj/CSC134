@@ -24,7 +24,7 @@ int main() {
 
   if (YES == choice) {
   	cout << "You say yes" << endl;
-    cout << "Sadly, you lose. " << endl;
+    cout << "The witch takes you to her magical tower and asks you to choose your speciality. " << endl;
   }
   else if (NO == choice) {
   	cout << "You say no and begin to walk away" << endl;
