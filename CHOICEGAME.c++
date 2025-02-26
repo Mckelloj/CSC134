@@ -3,20 +3,18 @@
 using namespace std;
 
 // beginning of the main() method
-int main() {
+int main() 
+{
   // declare the variable we need
-  int choice; 
+  
+  int choice, str, agi, def, mana; 
 
   const int YES = 1;
   const int NO = 2;
   const int IGNORE = 3;
 
 
-
   // ask the question
-
-  
-    
 
   cout << "A witch approaches you and asks if you want to be her apperentice." << endl;
   cout << "1. YES" << endl;
@@ -25,95 +23,53 @@ int main() {
   cout << "Type 1,2, or 3: "; 
   cin >> choice;
 
-
-
+  
   // using if, make a decision based on the user's choice
 
   if (YES == choice) 
   {
   	cout << "You say yes" << endl;
     cout << "The witch takes you to her magical tower and asks you to choose your speciality. " << endl;
+    
 
+    cout << "   Options" << endl;
     cout << "1. Elementalist" << endl;
     cout << "2. VoidKeeper"   << endl;
     cout << "3. Enchanter" << endl;
     cout << "Type 1,2, or 3: "; 
     cin >> choice;
     
-    if ( choice = 1)  
+    if ( choice == 1)  
     {
       cout << "Congratulations you have chosen the elementalist path" << endl;
     }
 
-    else if ( choice = 2)  
+    else if ( choice == 2)  
     {
-      cout << "Congratulations you have chosen the Voidkeeper's path" << endl;
+      cout << "Congratulations you have chosen the Spiritualist path" << endl;
     }
 
-    else if ( choice = 3)  
+    else if ( choice == 3)  
     {
       cout << "Congratulations you have chosen the Enchanter's path" << endl;
     }
 
-    else if ( choice = 7894561234567890)  
+    else if ( choice == 741236985)  
     {
-      cout << "Congratulations you have chosen the Unlocked the Divine path" << endl;
-      cout << "Str 10   Class bonus + 50" << endl;
-      cout << "Agi 8   Class bonus + 30" << endl;
-      cout << "Int 6   Class bonus + 20" << endl;
-      cout << "Str 7   Class bonus + 50" << endl;
-      
+      cout << "Congratulations you have chosen the Unlocked the Cosmic path" << endl;
+    }
+
+    else
+    {
+      cout << "Congratulations you have chosen the Toilet keeper's path" << endl;
     }
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     else if (NO == choice) 
     {
   	  cout << "You say no and begin to walk away" << endl;
       cout << "She hypnotises you and takes you to her dungeon where she torchures you repeatedly." << endl;
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
       else if (IGNORE == choice) 
       {
@@ -124,31 +80,12 @@ int main() {
         cout << "Type 1,2, or 3: "; 
         cin >> choice;
       }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-         else 
-         {
-  	        cout << "I'm sorry, that is not a valid choice." << endl;
-         }
-
+        
+        else 
+        {
+  	      cout << "I'm sorry, that is not a valid choice." << endl;
+        }
+         
 
 
   // finish up

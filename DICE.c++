@@ -6,8 +6,8 @@ using namespace std;
 
 int main()
 {
-   const int SIDES = 409568;
-   int seed = 9479;
+   const int SIDES =5;
+   int seed = 923456789;
 
    srand(seed);
 
@@ -16,14 +16,14 @@ int main()
 
 // roll the dice
 
-   roll1 = ( (rand() % SIDES)+1 );
+   roll1 = ( (rand() % SIDES)+5 );
    cout << roll1 << endl;
 
-   roll2 = ( (rand() & SIDES)+1 );
+   roll2 = ( (rand() % SIDES)+5);
    cout << roll2 << endl;
 
-   total = roll1 * 10 + roll2;
+   total = roll1 + roll2;
 
-   cout << "You rolled "<< total << endl;
-
+   
+   cout << "You rolled " << roll1 << " & " << roll2 << " The total is: " << total << endl;
 }
