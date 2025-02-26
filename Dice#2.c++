@@ -12,7 +12,7 @@ int main()
 {
     
     askQuestion();
-    rollDice(); 
+     
     return 0;
 } 
 
@@ -26,6 +26,25 @@ void askQuestion()
     cout << "            " << endl;
     cout << "Do you want to roll the dice to decide your fate? (y/n): ";
     cin >> choice;
+
+    while (choice != 'y' && choice != 'n') 
+    {
+        cout << "Invalid input! Please enter 'y' for Yes or 'n' for No: ";
+        cin >> choice;
+    }
+
+      if (choice == 'y') 
+      {
+        rollDice(); // Roll the dice if user agrees
+      } 
+
+        else if(choice == 'n') 
+    {
+        cout << "            " << endl;
+        cout << "The witch curses you to (never use the internet again) and flies away." << endl;
+        cout << "            " << endl;
+    }
+    
 }
 
 void rollDice() 
@@ -38,6 +57,7 @@ void rollDice()
     int total = roll1 + roll2;
 
     cout << "You rolled " << roll1 << " & " << roll2 << " for a total of " << total << endl;
+
 }
 
 
