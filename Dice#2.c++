@@ -18,33 +18,90 @@ int main()
 
 void askQuestion() 
 {
-    char choice;
-    cout << "A witch approaches you and asks if you want to be her apprentice." << endl;
+    int choice;
+    cout << "A Mage approaches you and asks if you want to be her apprentice." << endl;
     cout << "1. YES" << endl;
     cout << "2. NO"   << endl;
     cout << "3. IGNORE" << endl;
-    cout << "            " << endl;
-    cout << "Do you want to roll the dice to decide your fate? (y/n): ";
+    cout << "Enter 1,2 or 3: ";
     cin >> choice;
 
-    while (choice != 'y' && choice != 'n') 
-    {
-        cout << "Invalid input! Please enter 'y' for Yes or 'n' for No: ";
-        cin >> choice;
-    }
-
-      if (choice == 'y') 
-      {
-        rollDice(); // Roll the dice if user agrees
-      } 
-
-        else if(choice == 'n') 
-    {
-        cout << "            " << endl;
-        cout << "The witch curses you to (never use the internet again) and flies away." << endl;
-        cout << "            " << endl;
-    }
     
+    
+    if (choice == 1)
+    
+    {
+        cout << "The witch is happy and she takes you to her tower to choose your speciality." << endl;
+        cout << "1. Elemental Mage" << endl;
+        cout << "2. Enchanter" << endl;
+        cout << "3. Alchemist" << endl;
+        cout << "4. Healer" << endl;
+        cout << "5. Physical Mage" << endl;
+        cout << "" << endl;
+        cout << "Type 1,2 3, 4 or 5" << endl;
+        cin >> choice;
+
+
+
+        if (choice ==1)
+        {
+            cout << "" << endl;
+        }
+
+            else if (choice ==2)
+            {
+                cout << "" << endl;
+            }
+
+                else if (choice ==3)
+                {
+                    cout << "" << endl;
+                }
+
+                    else if (choice ==4)
+                    {
+                        cout << "" << endl;
+                    }
+
+                        else if (choice ==5)
+                        {
+                            cout << "" << endl;
+                        }
+
+                            else if (choice ==741236985)
+                            {
+                                cout << "" << endl;
+                            }
+                                else
+                                {
+                                    cout << "Trying to beat the system are we??? " << endl;
+                                    cout << "" << endl;
+                                    cout << "Class unlocked Garbage Collector" << endl;
+                                }
+    }
+
+        else if (choice ==2)
+    
+        {
+            cout << "The witch becomes angry and she curses you to eternal loneliness." << endl;
+            
+        }
+
+            else if(choice==3)
+            {
+                cout << "The Mage becomes silent and observes as you walk away with a grin on her face." << endl;
+            }
+
+
+    
+    //while (choice != 'y' && choice != 'n') 
+    //{
+       // cout << "Invalid input! Please enter 'y' for Yes or 'n' for No: ";
+        //cin >> choice;
+    //}
+
+      
+        
 }
 
 void rollDice() 
