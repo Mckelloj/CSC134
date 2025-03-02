@@ -7,11 +7,27 @@ int main()
 {
   // declare the variable we need
   
-  int choice, str, agi, def, mana; 
-
+  int choice, str = 10, agi = 10, def = 10, mana = 10; 
+  string status = "";
   const int YES = 1;
   const int NO = 2;
   const int IGNORE = 3;
+
+  //Introduction
+
+  cout << "Welcome to Arcadia" << endl;
+  cout << "Your choice adventure awaits." << endl;
+  cout << "Type (Stat) at any time to chect your status window" << endl;
+  cout << "A witch approaches you and asks if you want to be her apperentice." << endl;
+  cout << "A witch approaches you and asks if you want to be her apperentice." << endl;
+  cout << "A witch approaches you and asks if you want to be her apperentice." << endl;
+  cout << "A witch approaches you and asks if you want to be her apperentice." << endl;
+  cout << "A witch approaches you and asks if you want to be her apperentice." << endl;
+  cout << "A witch approaches you and asks if you want to be her apperentice." << endl;
+  cout << "A witch approaches you and asks if you want to be her apperentice." << endl;
+  cout << "A witch approaches you and asks if you want to be her apperentice." << endl;
+  cout << "A witch approaches you and asks if you want to be her apperentice." << endl;
+
 
 
   // ask the question
@@ -61,8 +77,9 @@ int main()
 
     else
     {
-      cout << "Congratulations you have chosen the Toilet keeper's path" << endl;
+      cout << "Trying to be smart are we ??" << endl;
     }
+    
   }
 
     else if (NO == choice) 
