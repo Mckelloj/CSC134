@@ -6,9 +6,13 @@ using namespace std;
 int main() 
 {
   // declare the variable we need
-  
-  int choice, str = 10, agi = 10, def = 10, mana = 10; 
+  string 
+  int choice;
+   
+  int str = 10, agi = 10, def = 10, mana = 10;
+
   string status = "";
+  
   const int YES = 1;
   const int NO = 2;
   const int IGNORE = 3;
@@ -18,15 +22,8 @@ int main()
   cout << "Welcome to Arcadia" << endl;
   cout << "Your choice adventure awaits." << endl;
   cout << "Type (Stat) at any time to chect your status window" << endl;
-  cout << "A witch approaches you and asks if you want to be her apperentice." << endl;
-  cout << "A witch approaches you and asks if you want to be her apperentice." << endl;
-  cout << "A witch approaches you and asks if you want to be her apperentice." << endl;
-  cout << "A witch approaches you and asks if you want to be her apperentice." << endl;
-  cout << "A witch approaches you and asks if you want to be her apperentice." << endl;
-  cout << "A witch approaches you and asks if you want to be her apperentice." << endl;
-  cout << "A witch approaches you and asks if you want to be her apperentice." << endl;
-  cout << "A witch approaches you and asks if you want to be her apperentice." << endl;
-  cout << "A witch approaches you and asks if you want to be her apperentice." << endl;
+ 
+  cout << "Lets Begin" << endl;
 
 
 

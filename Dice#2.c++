@@ -39,6 +39,7 @@ void askQuestion()
         cout << "5. Physical Mage" << endl;
         cout << "" << endl;
         cout << "Type 1,2 3, 4 or 5" << endl;
+        cout << "Type 6 if you wish to have the dice choose for you" << endl;
         cin >> choice;
 
 
@@ -68,15 +69,22 @@ void askQuestion()
                             cout << "" << endl;
                         }
 
+                        else if (choice ==6)
+                        {
+                            cout << "" << endl;
+                            rollDice();
+                        }
                             else if (choice ==741236985)
                             {
                                 cout << "" << endl;
                             }
                                 else
                                 {
+                                    cout << "" << endl;
                                     cout << "Trying to beat the system are we??? " << endl;
                                     cout << "" << endl;
                                     cout << "Class unlocked Garbage Collector" << endl;
+                                    cout << "" << endl;
                                 }
     }
 
@@ -89,16 +97,12 @@ void askQuestion()
 
             else if(choice==3)
             {
-                cout << "The Mage becomes silent and observes as you walk away with a grin on her face." << endl;
+                cout << "The Mage becomes silent and observes as you walk away with a sneer on her face." << endl;
             }
 
 
     
-    //while (choice != 'y' && choice != 'n') 
-    //{
-       // cout << "Invalid input! Please enter 'y' for Yes or 'n' for No: ";
-        //cin >> choice;
-    //}
+    
 
       
         
