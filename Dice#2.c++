@@ -110,7 +110,7 @@ void askQuestion()
 
 void rollDice() 
 {
-    const int SIDES = 3; // Number of sides on the dice
+    const int SIDES = 6; // Number of sides on the dice
     srand(time(0)); // Seed the random number generator
 
     int roll1 = (rand() % SIDES) + 1;
