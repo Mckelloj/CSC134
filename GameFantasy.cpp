@@ -20,20 +20,20 @@ void updateStats(int roll1, int roll2, int roll3, int roll4, int roll5, int roll
 
 int main() 
 {
-    StatusPage();
-    gamePlay1();
+    
     
     char repeat;
+    int choice;
 
-    while (repeat == 'y') 
+    char repeat = 'y';
+
+    while (repeat == 'y')
     {
        
         cout << "Choose an option:"  << endl;
         cout << "1. Check Status" << endl;
         cout << "2. Roll Dice" << endl;
-        cout << "3. Exit" << endl;
-
-        int choice;
+        cout << "3. Enter Game" << endl;
         cin >> choice;
 
         switch(choice) 
@@ -44,25 +44,26 @@ int main()
 
             case 2:
                 rollDice();
+                cout << "Do you want to roll the dice again? (y/n): ";
+                 
                 break;
 
             case 3:
-                cout << "Exiting the game." << endl;
+
+                cout << "Welcome to Arcadia." << endl;
                 break;
 
             default:
                 cout << "Invalid choice, please try again." << endl;
+                
         }
 
-        cout << "Do you want to repeat? Enter y/n: ";
-        cin >> repeat;
+        cout << "Do you want to start again? ";
+        cin >> repeat;  // Take input from the user
+    
     }
-
-    if (repeat == 'n') 
-    {
-        cout << "Game over" << endl;
-    }
-
+    StatusPage();
+    gamePlay1();
     return 0;
 }
 
@@ -89,10 +90,10 @@ int gamePlay1()
 
 void rollDice() 
 {
-    const int SIDES = 6;  // Number of sides on the dice
-    srand(time(0));       // Seed the random number generator
+    const int SIDES = 6;  // Number of sides
+    srand(time(0));       
 
-    // Roll six dice
+    // Roll dice
     int roll1 = (rand() % SIDES) + 1;
     int roll2 = (rand() % SIDES) + 1;
     int roll3 = (rand() % SIDES) + 1;
@@ -101,7 +102,7 @@ void rollDice()
     int roll6 = (rand() % SIDES) + 1;
 
 
-    // Output the dice rolls and total
+    // Output the dice rolls 
     cout << "Dice Rolls: " << roll1 << ", " << roll2 << ", " << roll3 << ", " 
          << roll4 << ", " << roll5 << ", " << roll6 << endl;
     
@@ -113,7 +114,7 @@ void rollDice()
 void updateStats(int roll1, int roll2, int roll3, int roll4, int roll5, int roll6) 
 {
     // Update stats by adding random dice rolls to stats values
-    // For example: STR will increase by roll1, INT by roll2, etc.
+    
 
     STR += roll1;
     INT += roll2;
