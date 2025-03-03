@@ -23,10 +23,11 @@ int main()
     StatusPage();
     gamePlay1();
     
-    bool gameRunning = true;
+    char repeat;
 
-    while (gameRunning) 
+    while (repeat == 'y') 
     {
+       
         cout << "Choose an option:"  << endl;
         cout << "1. Check Status" << endl;
         cout << "2. Roll Dice" << endl;
@@ -40,16 +41,26 @@ int main()
             case 1:
                 StatusPage();
                 break;
+
             case 2:
                 rollDice();
                 break;
+
             case 3:
-                gameRunning = false;
                 cout << "Exiting the game." << endl;
                 break;
+
             default:
                 cout << "Invalid choice, please try again." << endl;
         }
+
+        cout << "Do you want to repeat? Enter y/n: ";
+        cin >> repeat;
+    }
+
+    if (repeat == 'n') 
+    {
+        cout << "Game over" << endl;
     }
 
     return 0;
