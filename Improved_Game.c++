@@ -158,8 +158,15 @@ int main()
     {
         std::cout << "\nChoose an option:" << std::endl;
 
+
+        std::cout << "\n"
+        "Show Status \n"
+        "Roll Dice \n"
+        "Enter Game \n"
+        "Check Inventory \n"
+        "Exit Game \n"
+        "Help Player \n";
         
-        std::cout << "\nChoose an option:" << std::endl;
         
 
 
