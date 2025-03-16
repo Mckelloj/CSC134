@@ -1,6 +1,7 @@
 #include <iostream>
 #include <map>
 #include <string>
+#include <vector>
 
 using namespace std;
 
@@ -43,8 +44,88 @@ using namespace std;
 
 
 
+    void showStatus() 
+    {
+        std::cout << "Showing status..." << std::endl;
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    void rollDice() 
+    {
+        std::cout << "Rolling dice..." << std::endl;
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    void gamePlay1() 
+    {
+        std::cout << "Starting game..." << std::endl;
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    void inventoryMenu() 
+    {
+        std::cout << "Opening inventory..." << std::endl;
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    void helpMeOut() 
+    {
+        std::cout << "Help menu..." << std::endl;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 int main() 
 {
+    bool playing = true;
     char repeat;
     int choice;
 
@@ -59,12 +140,75 @@ int main()
     itemPrices["LvL_1  Health Potion"] = 30;
 
 
+
 //Damage of Items
     std::map<std::string, int> itemDamage;
-    itemDamage["Sword"] = 40;
+    itemDamage["Sword"] = 10;
+    itemDamage["Sheild"] = 5;
 
 
 
+//Durability of Items
+    std::map<std::string, int> itemDurability;
+    itemDurability["Sword"] = 100;
+    itemDurability["Shield"] = 10;
+
+
+    while (playing) 
+    {
+        std::cout << "\nChoose an option:" << std::endl;
+
+        
+        std::cout << "\nChoose an option:" << std::endl;
+        
+
+
+
+        int choice;
+        std::cout << "Enter your choice (0-5): ";
+        std::cin >> choice;
+
+
+
+
+        switch (choice) 
+        {
+            case 0:  showStatus();  
+            break;
+
+            case 1:  rollDice();  
+            break;
+
+            case 2:  std::cout << "Welcome to Arcadia!" << std::endl;  gamePlay1();  
+            break;
+
+            case 3:  inventoryMenu();  
+            break;
+
+            case 4:  playing = false;     std::cout << "Thanks for playing! Goodbye!" << std::endl;   
+            break;
+
+            case 5:  helpMeOut();  
+            break;
+
+            default:
+                std::cout << "Invalid choice. Try again." << std::endl;
+
+        }
+
+
+
+    }
 
     return 0;
 }
+
+
+
+
+
+
+
+
+
+
