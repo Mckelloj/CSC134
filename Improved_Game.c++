@@ -4,15 +4,17 @@ using namespace std;
 
 int main()
 {
-    string pattern = "96969696969696969696969696969696969";
-    const int width = 8;
-    const int width = 5;
+    string pattern1 = "0000000000000000000000000000000000000000000000111111111111111111111111111111111111111111111111111";
+    string pattern2 = "11111111111111111111111111111111111111111111110";
+    const int width = 1000;
+    const int Height = 1000;
 
     int count = 0;
     while (count < width)
     {
-        cout << pattern;
-        cout +=1;
+        cout << pattern1;
+        cout << pattern2;
+        //count ++;
 
     }
 
