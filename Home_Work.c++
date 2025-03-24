@@ -10,17 +10,17 @@ void calculateAverageRainfall()
     double rain1, rain2, rain3;
 
     // Get user input
-    std::cout << "Enter month: ";
+    std::cout << "Enter month 1: ";
     std::cin >> month1;
     std::cout << "Enter rainfall for " << month1 << ": ";
     std::cin >> rain1;
 
-    std::cout << "Enter month: ";
+    std::cout << "Enter month 2: ";
     std::cin >> month2;
     std::cout << "Enter rainfall for " << month2 << ": ";
     std::cin >> rain2;
 
-    std::cout << "Enter month: ";
+    std::cout << "Enter month 3: ";
     std::cin >> month3;
     std::cout << "Enter rainfall for " << month3 << ": ";
     std::cin >> rain3;
@@ -44,10 +44,50 @@ void calculateVolume()
 
     std::cout << "Enter Length: ";
     std::cin >> Length;
+
+
+    double volume = Height * Width * Height;
+
+
+
+
+
+    cout <<" This is the volume "<< volume <<endl;
 }
 
 int main() 
-{
-    calculateAverageRainfall();  
+{ 
+    int question;
+    string choice = "yes";
+     
+
+    while (choice == "yes")
+    {
+        cout <<"Choose the question you wish to view" << endl;
+        cout <<"Choose between: (1,2,3,4,5)" << endl;
+        cin >> question; 
+
+    if (question = 1)
+    {
+        calculateAverageRainfall();  
+    }
+
+    else if (question = 2)
+    {
+        calculateVolume();  
+    }
+
+    else if (question = 3)
+    {
+          
+    }
+        
+
+
+        cout <<"Do you wish to run again? " << endl;
+        cin >> choice;
+
+    }
+        cout << "Exiting the loop." << endl;
     return 0;
 }
