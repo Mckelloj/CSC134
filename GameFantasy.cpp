@@ -1,165 +1,100 @@
 #include <iostream>
+#include <vector>
 #include <string>
-#include <cstdlib>
-#include <ctime>
+
 using namespace std;
 
-// Stats
-int STR = 10;
-int INT = 10;
-int DEF = 10;
-int AGI = 10;
-int ENG = 10;
-int CHR = 10;
-string location = "Arcadia"; // Player's current location
+vector<string> inventory; // Player inventory
 
 
-int AzureStar();
-void StatusPage();   // Status page function
-int gameIntro(); //Back story 
-void rollDice();     // Dice rolling function
-void updateStats(int roll1, int roll2, int roll3, int roll4, int roll5, int roll6); // Update stats 
-
-int main() 
+int main()
 {
-    char repeat = 'y';
     int choice;
-  
-    while (repeat == 'y')
+    bool running = true;
+
+    while (running) 
     {
-        cout << "Choose an option:"  << endl;
-        cout << "1. Check Status" << endl;
-        cout << "2. Roll Dice" << endl;
-        cout << "3. Enter Game" << endl;
+        cout << "========= Start ==========" << endl;
+        cout << "\nChoose an option:" << endl;
+        cout << "1. Start Game" << endl;
+        cout << "2. View Inventory" << endl;
+        cout << "3. Exit" << endl;
+        cout << "Enter your choice: ";
         cin >> choice;
-      
-        switch(choice) 
+        
+        switch (choice) 
         {
             case 1:
-                StatusPage();
-                break;
-
-            case 2:
-                rollDice();
-                break;
-
-            case 3:
-                cout << "Welcome to " << location << "." << endl;
                 gameIntro();
                 break;
-
+            case 2:
+                viewInventory();
+                break;
+            case 3:
+                cout << "Exiting game..." << endl;
+                running = false;
+                break;
             default:
                 cout << "Invalid choice, please try again." << endl;
         }
-
-        cout << "Do you want to start again? (y/n): ";
-        cin >> repeat;
     }
-  
+
     return 0;
+
 }
 
-void StatusPage()
-{
-    // Display the stats with emojis
-    cout << "\n======= Player Stats =======" << endl;
-    cout << "🌍 Location: " << location << endl;
-    cout << "💪 STR: " << STR << endl;
-    cout << "🧠 INT: " << INT << endl;
-    cout << "🛡️ DEF: " << DEF << endl;
-    cout << "⚡ AGI: " << AGI << endl;
-    cout << "🔥 ENG: " << ENG << endl;
-    cout << "😃 CHR: " << CHR << endl;
-    cout << "============================\n" << endl;
-}
 
-int gameIntro()
+
+void viewInventory() 
 {
-    char choice = 'y';
-    cout << "============== Introduction ==============\n";
-    cout << "Welcome to The Xona Mother Ship, Agent #1.\n";
-    cout << "You are the last surviving member of the organization.\n";
-    cout << "Your mission is to decode diverse technology and add it to the fleet's database.\n";
-    cout << "Are you ready??? y/n \n";
- 
-    if (choice = 'y')
+    cout << "\n======= Inventory =======" << endl;
+    if (inventory.empty()) 
     {
-        AzureStar();
-    }
-
+        cout << "Your inventory is empty!" << endl;
+    } 
+    
     else 
     {
-        cout << "Such a pity 😞" <<endl;
-        cout << "You must die 🔥 " <<endl;
+        for (const string &item : inventory) 
+        {
+            cout << "- " << item << endl;
+        }
     }
-    
+    cout << "========================\n" << endl;
+}
+
+int gameIntro() 
+{
+    char choice;
+    cout << "============== Introduction ==============" << endl;
+    cout << "Welcome to The Xona Mother Ship, Agent #1." << endl;
+    cout << "You are the last surviving member of the organization." << endl;
+    cout << "Your mission is to decode diverse technology and add it to the fleet's database." << endl;
+    cout << "Are you ready??? y/n " << endl;
+    cin >> choice;  
+
+  
+
+    /*else 
+    {
+        cout << "Such a pity 😞" << endl;
+        cout << "You must die 🔥 " << endl;
+    }*/
     return 0;
 }
 
-int AzureStar()
+void AzureStar()
 {
+    cout << "============== Azure Star ==============" << endl;
+    cout << "You have accepted the mission" << endl;
+    cout << "Entry Gift is being distributed" << endl;
+    cout << "You have gained:" << endl;
+    cout << "- Cosmic Grade Space-Serum" << endl;
+    cout << "- ??? Grade Tech Analyser" << endl;
     
-}
-
-void rollDice() 
-{
-    const int SIDES = 6;  // Number of sides
-    srand(time(0));       
-    int rollsLeft = 3; // Maximum of three rolls
-    char repeat;
-
+    // Add items to inventory
+    inventory.push_back("Cosmic Grade Space-Serum");
+    inventory.push_back("??? Grade Tech Analyser");
     
-    while (repeat == 'y' && rollsLeft > 0);
- 
-    {
-        // Roll dice
-        int roll1 = (rand() % SIDES) + 1;
-        int roll2 = (rand() % SIDES) + 1;
-        int roll3 = (rand() % SIDES) + 1;
-        int roll4 = (rand() % SIDES) + 1;
-        int roll5 = (rand() % SIDES) + 1;
-        int roll6 = (rand() % SIDES) + 1;
-
-        // Output the dice rolls 
-        cout << "Dice Rolls: " << roll1 << ", " << roll2 << ", " << roll3 << ", " 
-             << roll4 << ", " << roll5 << ", " << roll6 << endl;
-        
-        // Update stats 
-        updateStats(roll1, roll2, roll3, roll4, roll5, roll6);
-        
-        rollsLeft--;
-        if (rollsLeft < 0) 
-        {
-            cout << "You have " << rollsLeft << " rolls left";
-
-            
-
-        } 
-
-        else
-        {
-
-        }
-
-
-        cout << "Would you like to roll again y/n";
-        cin >> repeat;
-
-    } 
+    viewInventory(); // Show updated inventory
 }
-    
-
-void updateStats(int roll1, int roll2, int roll3, int roll4, int roll5, int roll6) 
-{
-    // Update stats by adding random dice rolls to stats values
-    STR += roll1;
-    INT += roll2;
-    DEF += roll3;
-    AGI += roll4;
-    ENG += roll5;
-    CHR += roll6;
-
-    cout << "\n🎲 Stats updated!!! 🎲\n" << endl;
-    StatusPage();  // Show updated stats
-}
-
