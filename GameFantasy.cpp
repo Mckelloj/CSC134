@@ -6,24 +6,25 @@ using namespace std;
 
 vector<string> inventory; // Player inventory
 
+void viewInventory();
+void useItem();
+void AzureStar();
+int gameIntro();
 
-int main()
-{
+int main() {
     int choice;
     bool running = true;
-
-    while (running) 
-    {
-        cout << "========= Start ==========" << endl;
+    
+    while (running) {
         cout << "\nChoose an option:" << endl;
         cout << "1. Start Game" << endl;
         cout << "2. View Inventory" << endl;
-        cout << "3. Exit" << endl;
+        cout << "3. Use Item" << endl;
+        cout << "4. Exit" << endl;
         cout << "Enter your choice: ";
         cin >> choice;
         
-        switch (choice) 
-        {
+        switch (choice) {
             case 1:
                 gameIntro();
                 break;
@@ -31,6 +32,9 @@ int main()
                 viewInventory();
                 break;
             case 3:
+                useItem();
+                break;
+            case 4:
                 cout << "Exiting game..." << endl;
                 running = false;
                 break;
@@ -38,14 +42,10 @@ int main()
                 cout << "Invalid choice, please try again." << endl;
         }
     }
-
     return 0;
-
 }
 
-
-
-void viewInventory() 
+void viewInventory()
 {
     cout << "\n======= Inventory =======" << endl;
     if (inventory.empty()) 
@@ -55,16 +55,58 @@ void viewInventory()
     
     else 
     {
-        for (const string &item : inventory) 
+        for (size_t i = 0; i < inventory.size(); ++i) 
+        
         {
-            cout << "- " << item << endl;
+            cout << i + 1 << ". " << inventory[i] << endl;
         }
     }
     cout << "========================\n" << endl;
 }
 
-int gameIntro() 
+void useItem() 
 {
+    if (inventory.empty()) 
+    {
+        cout << "Your inventory is empty!" << endl;
+        return;
+    }
+    
+    viewInventory();
+    int choice;
+    cout << "Enter the number of the item you want to use (or 0 to cancel): ";
+    cin >> choice;
+    
+    if (choice > 0 && choice <= inventory.size()) 
+    {
+        string item = inventory[choice - 1];
+        cout << "You used " << item << "!" << endl;
+        
+        if (item == "Cosmic Grade Space-Serum") 
+        {
+            cout << "Your energy has been restored!" << endl;
+        } 
+        
+        else if (item == "??? Grade Tech Analyser") 
+        {
+            cout << "You analyze an unknown technology!" << endl;
+        }
+        
+        inventory.erase(inventory.begin() + (choice - 1));
+    } 
+    
+    else if (choice == 0) 
+    {
+        cout << "Cancelled item use." << endl;
+    }
+    
+    else 
+    {
+        cout << "Invalid choice." << endl;
+    }
+}
+
+int gameIntro() {
     char choice;
     cout << "============== Introduction ==============" << endl;
     cout << "Welcome to The Xona Mother Ship, Agent #1." << endl;
@@ -73,18 +115,16 @@ int gameIntro()
     cout << "Are you ready??? y/n " << endl;
     cin >> choice;  
 
-  
-
-    /*else 
-    {
+    if (choice == 'y') {
+        AzureStar();
+    } else {
         cout << "Such a pity 😞" << endl;
         cout << "You must die 🔥 " << endl;
-    }*/
+    }
     return 0;
 }
 
-void AzureStar()
-{
+void AzureStar() {
     cout << "============== Azure Star ==============" << endl;
     cout << "You have accepted the mission" << endl;
     cout << "Entry Gift is being distributed" << endl;
