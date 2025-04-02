@@ -1,0 +1,100 @@
+// CSC 134 
+// M3HW1 - Gold
+// Joshua Mckellop
+// 3/1/2025 
+
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+void questionOne() 
+{
+    string month1, month2, month3;
+    double rainfall1, rainfall2, rainfall3;
+
+    // Get the input for each month and its rainfall
+    cout << "Enter month: ";
+    cin >> month1;
+    cout << "Enter rainfall for " << month1 << ": ";
+    cin >> rainfall1;
+
+    cout << "Enter month: ";
+    cin >> month2;
+    cout << "Enter rainfall for " << month2 << ": ";
+    cin >> rainfall2;
+
+    cout << "Enter month: ";
+    cin >> month3;
+    cout << "Enter rainfall for " << month3 << ": ";
+    cin >> rainfall3;
+
+    // Calculate the average rainfall
+    double averageRainfall = (rainfall1 + rainfall2 + rainfall3) / 3.0;
+
+    // Set the output to show 2 decimal places
+    cout << fixed << setprecision(2);
+
+    // Display the result
+    cout << "The average rainfall for " << month1 << ", " << month2 << ", and " << month3
+         << " is " << averageRainfall << " inches." << endl;
+}
+
+// Placeholder methods for other questions
+void questionTwo() 
+{
+    // Placeholder for question 2
+    cout << "Question 2 is under construction." << endl;
+}
+
+void questionThree() 
+{
+    // Placeholder for question 3
+    cout << "Question 3 is under construction." << endl;
+}
+
+void questionFour() 
+{
+    // Placeholder for question 4
+    cout << "Question 4 is under construction." << endl;
+}
+
+void questionFive() 
+{
+    // Placeholder for question 5
+    cout << "Question 5 is under construction." << endl;
+}
+
+int main() 
+{
+    int choice;
+
+    // Display the menu and ask for a choice
+    cout << "Choose a question (1-5): ";
+    cin >> choice;
+
+    // Call the appropriate function based on user input
+    switch (choice) 
+    {
+        case 1:
+            questionOne();
+            break;
+        case 2:
+            questionTwo();
+            break;
+        case 3:
+            questionThree();
+            break;
+        case 4:
+            questionFour();
+            break;
+        case 5:
+            questionFive();
+            break;
+        default:
+            cout << "Invalid choice! Please choose a number between 1 and 5." << endl;
+            break;
+    }
+
+    return 0;
+}
