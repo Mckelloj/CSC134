@@ -106,26 +106,120 @@ void displayRomanNumeral()
     cout << "." << endl;
 }
 
+void geometryCalculator() {
+    const double PI = 3.14159;
+    int choice;
+
+    cout << "Geometry Calculator" << endl;
+    cout << " 1. Calculate the Area of a Circle" << endl;
+    cout << " 2. Calculate the Area of a Rectangle" << endl;
+    cout << " 3. Calculate the Area of a Triangle" << endl;
+    cout << " 4. Quit" << endl;
+    cout << "Enter your choice (1-4): ";
+    cin >> choice;
+
+    cout << fixed << setprecision(5);  
+
+    switch (choice) 
+    {
+        case 1: 
+        {
+            double radius;
+            cout << "Enter the circle's radius: ";
+            cin >> radius;
+
+            if (radius < 0) 
+            {
+                cout << "The radius cannot be less than zero." << endl;
+            } 
+            
+            else 
+            {
+                double area = PI * radius * radius;
+                cout << "The area is " << area << endl;
+            }
+            break;
+        }
+
+        case 2: 
+        {
+            double length, width;
+            cout << "Enter the rectangle's length: ";
+            cin >> length;
+            cout << "Enter the rectangle's width: ";
+            cin >> width;
+
+            if (length < 0 || width < 0) 
+            {
+                cout << "Length and width must be greater than 0." << endl;
+            } 
+            
+            else 
+            {
+                double area = length * width;
+                cout << "The area is " << area << endl;
+            }
+            break;
+        }
+
+        case 3: 
+        {
+            double base, height;
+            cout << "Enter the triangle's base: ";
+            cin >> base;
+            cout << "Enter the triangle's height: ";
+            cin >> height;
+
+            if (base < 0 || height < 0) 
+            {
+                cout << "Only enter positive values for base and height." << endl;
+            } 
+            
+            else 
+            {
+                double area = 0.5 * base * height;
+                cout << "The area is " << area << endl;
+            }
+            break;
+        }
+
+        case 4:
+            cout << "Exiting Geometry Calculator." << endl;
+            break;
+
+        default:
+            cout << "Choices 1 through 4 are valid. Run the program again and select one of those." << endl;
+    }
+}
 
 int main() 
 {
     int Choice;
-    cout << "You have some choices (1)Rainfall, (2)BlockVolume, (3)(4)(5)(6)" << endl;
-    cout << "choose between the functions: " << endl;
-    cin >> Choice;
-    
-    switch(Choice)
-    {
-        case 1:  calculateAverageRainfall(); break;
-        case 2:  calculateBlockVolume(); break;
-        case 3:  displayRomanNumeral(); break;
-    }
-    
-    
-    
-    
-   
-    
+    string repeat = "Yes";
 
+    while (repeat == "Yes" || repeat == "yes") 
+    {
+        cout << "============================================================================";
+        cout << "You have some choices:\n";
+        cout << "(1) Rainfall\n(2) Block Volume\n(3) Roman Converter\n(4)(5)(6) Coming Soon\n";
+        cout << "Choose between the functions: ";
+        cin >> Choice;
+
+        switch (Choice) 
+        {
+            case 1: calculateAverageRainfall(); break;
+            case 2: calculateBlockVolume(); break;
+            case 3: displayRomanNumeral(); break;
+            default: cout << "Invalid choice.\n"; break;
+        }
+        cout << "============================================================================";
+        cout << "Do you want to repeat? Yes/No: ";
+        cin >> repeat;
+        cout << endl;
+    }
+
+    cout << "============================================================================";
+    cout << "Thanks for using the program!" << endl;
     return 0;
+
 }
