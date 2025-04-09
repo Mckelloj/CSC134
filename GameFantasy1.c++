@@ -84,7 +84,7 @@ void useItem()
         
         if (item == "Cosmic Grade Space-Serum") 
         {
-            cout << "Your energy has been restored!" << endl;
+            cout << "You feel the power flowing through you..." << endl;
         } 
         
         else if (item == "??? Grade Tech Analyser") 
@@ -106,7 +106,8 @@ void useItem()
     }
 }
 
-int gameIntro() {
+int gameIntro() 
+{
     char choice;
     cout << "============== Introduction ==============" << endl;
     cout << "Welcome to The Xona Mother Ship, Agent #1." << endl;
@@ -124,7 +125,8 @@ int gameIntro() {
     return 0;
 }
 
-void AzureStar() {
+void AzureStar() 
+{
     cout << "============== Azure Star ==============" << endl;
     cout << "You have accepted the mission" << endl;
     cout << "Entry Gift is being distributed" << endl;
