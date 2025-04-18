@@ -9,6 +9,19 @@ void Tutorial()
     // Add tutorial details here
 }
 
+
+
+void loophole()
+{
+    cout << "" << endl;
+            cout << "You posess wisdom beyond this program" << endl;
+            cout << "As a reward I will grant you the power to rule this world but I will not tell you how" << endl;
+            system("start https://example.com");
+            cout << "" << endl;
+}
+
+
+
 // Function for level 1 of the game
 void Gamelvl1() 
 {
@@ -75,14 +88,7 @@ void elsewhere()
 
 }
 
-void loophole()
-{
-    cout << "" << endl;
-            cout << "You posess wisdom beyond this program" << endl;
-            cout << "As a reward I will grant you the power to rule this world but I will not tell you how" << endl;
-            system("start https://example.com");
-            cout << "" << endl;
-}
+
 
 int Homescreen() 
 {
