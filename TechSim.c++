@@ -12,32 +12,68 @@ void Tutorial()
 void Gamelvl1() 
 {
     int choice;
-    
+
     cout << "You wake up you head buzzing with pain" << endl;
     cout << "On your bed side table under the dim lamp lies a note" << endl;
     cout << "Do you: " << endl;
     cout << "(1) Pick up the note" << endl;
     cout << "(2) Ignore it" << endl;
-    cout << "(3)  " << endl;
+    cout << " " << endl;
     cout << "Make your choice: ";
     cin >> choice;
 
         switch (choice) 
         {
-            case 1:   
-                Gamelvl1();  
+            case 1:  
+            void note();
                 break;
+
             case 2:   
                 Tutorial();  
                 break;
+
             case 3:   
-                cout << "Thanks for playing!" << endl;  
-                return 0;  
+
+            cout << "Make your choice: ";
+
+                 
             default:
                 cout << "Invalid choice, please try again." << endl;
         }
     
 }
+
+
+
+
+
+
+
+void note()
+{
+    cout << "You wake up you head buzzing with pain" << endl;
+    cout << "On your bed side table under the dim lamp lies a note" << endl;
+    cout << "Do you: " << endl;
+    cout << "(1) Pick up the note" << endl;
+    cout << "(2) Ignore it" << endl;
+    cout << " " << endl;
+    cout << "Make your choice: ";
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 int Homescreen() 
 {
@@ -67,6 +103,24 @@ int Homescreen()
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 int main() 
 {
