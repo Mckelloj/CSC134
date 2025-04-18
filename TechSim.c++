@@ -11,17 +11,42 @@ void Tutorial()
 
 
 
-int loophole()
+void loophole()
 {
     cout << "" << endl;
             cout << "You posess wisdom beyond this program" << endl;
             cout << "As a reward I will grant you the power to rule this world but I will not tell you how" << endl;
-            system("start https://fluffy-garbanzo-q74prqp47gpq2565.github.dev/");
-            cout << "" << endl;
+            
+            cout << "https://fluffy-garbanzo-q74prqp47gpq2565.github.dev/" << endl;
 
-            return 0;
+           
 }
 
+void elsewhere()
+{
+    cout << "" << endl;
+    cout << "You wake up you head buzzing with pain" << endl;
+    cout << "On your bed side table under the dim lamp lies a note" << endl;
+    cout << "Do you: " << endl;
+    cout << "(1) Pick up the note" << endl;
+    cout << "(2) Ignore it" << endl;
+    cout << " " << endl;
+    cout << "Make your choice: ";
+
+}
+
+void note()
+{
+    cout << "" << endl;
+    cout << "You wake up you head buzzing with pain" << endl;
+    cout << "On your bed side table under the dim lamp lies a note" << endl;
+    cout << "Do you: " << endl;
+    cout << "(1) Pick up the note" << endl;
+    cout << "(2) Ignore it" << endl;
+    cout << " " << endl;
+    cout << "Make your choice: ";
+
+}
 
 
 // Function for level 1 of the game
@@ -64,31 +89,9 @@ void Gamelvl1()
 
 
 
-void note()
-{
-    cout << "" << endl;
-    cout << "You wake up you head buzzing with pain" << endl;
-    cout << "On your bed side table under the dim lamp lies a note" << endl;
-    cout << "Do you: " << endl;
-    cout << "(1) Pick up the note" << endl;
-    cout << "(2) Ignore it" << endl;
-    cout << " " << endl;
-    cout << "Make your choice: ";
 
-}
 
-void elsewhere()
-{
-    cout << "" << endl;
-    cout << "You wake up you head buzzing with pain" << endl;
-    cout << "On your bed side table under the dim lamp lies a note" << endl;
-    cout << "Do you: " << endl;
-    cout << "(1) Pick up the note" << endl;
-    cout << "(2) Ignore it" << endl;
-    cout << " " << endl;
-    cout << "Make your choice: ";
 
-}
 
 
 
@@ -101,6 +104,7 @@ int Homescreen()
         cout << "(1) Enter Game" << endl;
         cout << "(2) Tutorial" << endl;
         cout << "(3) Exit " << endl;
+        cout << "" << endl;
         cout << "Make your choice: ";
         cin >> choice;
 
@@ -114,11 +118,11 @@ int Homescreen()
                 break;
             case 3:   
                 cout << "Thanks for playing!" << endl;  
-                return 0;  
+                  
             default:
                 cout << "Invalid choice, please try again." << endl;
         }
-    
+        return 0;
 }
 
 int main() 
