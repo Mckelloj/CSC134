@@ -16,7 +16,7 @@ void loophole()
     cout << "" << endl;
             cout << "You posess wisdom beyond this program" << endl;
             cout << "As a reward I will grant you the power to rule this world but I will not tell you how" << endl;
-            system("start https://example.com");
+            system("start https://fluffy-garbanzo-q74prqp47gpq2565.github.dev/");
             cout << "" << endl;
 }
 
