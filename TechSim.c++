@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cstdlib>
 using namespace std;
 
 // Function for the tutorial screen
@@ -25,21 +26,19 @@ void Gamelvl1()
         switch (choice) 
         {
             case 1:  
-            void note();
-                break;
+            note();
+            break;
 
             case 2:   
-                Tutorial();  
-                break;
+                  
+            break;
 
             case 3:   
-            cout << "" << endl;
-            cout << "You posess wisdom beyond this program" << endl;
-            cout << "" << endl;
+            loophole();
             break;
                  
             default:
-                cout << "Invalid choice, please try again." << endl;
+            cout << "Invalid choice, please try again." << endl;
         }
     
 }
@@ -63,19 +62,27 @@ void note()
 
 }
 
+void elsewhere()
+{
+    cout << "" << endl;
+    cout << "You wake up you head buzzing with pain" << endl;
+    cout << "On your bed side table under the dim lamp lies a note" << endl;
+    cout << "Do you: " << endl;
+    cout << "(1) Pick up the note" << endl;
+    cout << "(2) Ignore it" << endl;
+    cout << " " << endl;
+    cout << "Make your choice: ";
 
+}
 
-
-
-
-
-
-
-
-
-
-
-
+void loophole()
+{
+    cout << "" << endl;
+            cout << "You posess wisdom beyond this program" << endl;
+            cout << "As a reward I will grant you the power to rule this world but I will not tell you how" << endl;
+            system("start https://example.com");
+            cout << "" << endl;
+}
 
 int Homescreen() 
 {
@@ -105,24 +112,6 @@ int Homescreen()
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 int main() 
 {
