@@ -12,7 +12,7 @@ void Tutorial()
 void Gamelvl1() 
 {
     int choice;
-
+    cout << "" << endl;
     cout << "You wake up you head buzzing with pain" << endl;
     cout << "On your bed side table under the dim lamp lies a note" << endl;
     cout << "Do you: " << endl;
@@ -33,9 +33,10 @@ void Gamelvl1()
                 break;
 
             case 3:   
-
-            cout << "Make your choice: ";
-
+            cout << "" << endl;
+            cout << "You posess wisdom beyond this program" << endl;
+            cout << "" << endl;
+            break;
                  
             default:
                 cout << "Invalid choice, please try again." << endl;
@@ -51,6 +52,7 @@ void Gamelvl1()
 
 void note()
 {
+    cout << "" << endl;
     cout << "You wake up you head buzzing with pain" << endl;
     cout << "On your bed side table under the dim lamp lies a note" << endl;
     cout << "Do you: " << endl;
