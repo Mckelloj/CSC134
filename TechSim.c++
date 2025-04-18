@@ -11,13 +11,15 @@ void Tutorial()
 
 
 
-void loophole()
+int loophole()
 {
     cout << "" << endl;
             cout << "You posess wisdom beyond this program" << endl;
             cout << "As a reward I will grant you the power to rule this world but I will not tell you how" << endl;
             system("start https://fluffy-garbanzo-q74prqp47gpq2565.github.dev/");
             cout << "" << endl;
+
+            return 0;
 }
 
 
@@ -92,9 +94,9 @@ void elsewhere()
 
 int Homescreen() 
 {
+
     int choice;
-    while (true) 
-    {
+    
         cout << "|||||||||||||||||||||||||||WELCOME TO STARLIT|||||||||||||||||||||||||||||" << endl;
         cout << "(1) Enter Game" << endl;
         cout << "(2) Tutorial" << endl;
@@ -116,7 +118,7 @@ int Homescreen()
             default:
                 cout << "Invalid choice, please try again." << endl;
         }
-    }
+    
 }
 
 int main() 
