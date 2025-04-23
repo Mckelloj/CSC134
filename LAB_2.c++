@@ -14,14 +14,15 @@ enum Direction {
 };
 
 // Direction strings for output
-const string DIRECTION_NAMES[NUM_DIRECTIONS] = {
+const string DIRECTION_NAMES[NUM_DIRECTIONS] = 
+{
     "north", "east", "south", "west"
 };
 
 // Define constants for rooms
 enum Room {
     ENTRANCE_HALL = 0,
-    LIBRARY = 1,
+    CODEX = 1,
     KITCHEN = 2,
     GARDEN = 3,
     BASEMENT = 4,
@@ -30,18 +31,20 @@ enum Room {
 
 int main() {
     // Room names array
-    string roomNames[NUM_ROOMS] = {
+    string roomNames[NUM_ROOMS] = 
+    {
         "Entrance Hall",
-        "Library",
+        "CODEX",
         "Kitchen",
         "Garden",
         "Basement"
     };
     
     // Room descriptions array
-    string roomDescriptions[NUM_ROOMS] = {
-        "A grand entrance hall with a dusty chandelier hanging above.",
-        "Walls lined with ancient books. The air smells of old paper.",
+    string roomDescriptions[NUM_ROOMS] = 
+    {
+        "A high tech metal entrance hall with a C+ grade alloy statue in the center. (You feel like you are being watched)",
+        "Walls lined with Holographic Displays. The air smells of elecrical circuits. (You feel an attraction from ) ",
         "A spacious kitchen with an old stove and wooden counter.",
         "An overgrown garden with stone pathways and a small fountain.",
         "A dark, damp basement with cobwebs in the corners."
@@ -60,16 +63,16 @@ int main() {
     
     // Define the connections between rooms using the Room enum
     // Entrance Hall connections
-    connections[ENTRANCE_HALL][NORTH] = LIBRARY;    // Entrance Hall -> North -> Library
+    connections[ENTRANCE_HALL][NORTH] = CODEX;    // Entrance Hall -> North -> Library
     connections[ENTRANCE_HALL][EAST] = KITCHEN;     // Entrance Hall -> East -> Kitchen
     connections[ENTRANCE_HALL][SOUTH] = -1;         // No connection south
     connections[ENTRANCE_HALL][WEST] = GARDEN;      // Entrance Hall -> West -> Garden
     
     // Library connections
-    connections[LIBRARY][NORTH] = -1;               // No connection north
-    connections[LIBRARY][EAST] = -1;                // No connection east
-    connections[LIBRARY][SOUTH] = ENTRANCE_HALL;    // Library -> South -> Entrance Hall
-    connections[LIBRARY][WEST] = -1;                // No connection west
+    connections[CODEX][NORTH] = -1;               // No connection north
+    connections[CODEX][EAST] = -1;                // No connection east
+    connections[CODEX][SOUTH] = ENTRANCE_HALL;    // Library -> South -> Entrance Hall
+    connections[CODEX][WEST] = -1;                // No connection west
     
     // Kitchen connections
     connections[KITCHEN][NORTH] = -1;               // No connection north
